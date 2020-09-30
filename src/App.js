@@ -2,25 +2,41 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
+
+  render() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+<div class="container">
+            <BrowserRouter>
+        
+          <Route exact path={'/'} component={LandingPage} />
+          <Route exact path={'/menu'} render={() => {
+            return <MainMenu
+              isActive={this.state.ismenuActive}
+              menu={this.state.menu}
+            />
+          }} />
+          <Route exact path={'/cart'} component={Cart} />
+          <Route exact path={'/checkout'} component={Checkout} />
+         <footer>
+          <p id="footertext">
+            {" "}
+            Designed and Coded by Travis Simpkins•{" "}
+            <a href="mailto:t73designs@yahoo.com" target="_blank" rel="noopener noreferrer">
+              {" "}
+              t73designs @yahoo.com{" "}
+            </a>
+          </p>
+        </footer>
+        </BrowserRouter>
+      </div>
   );
 }
 
-export default App;
+}
