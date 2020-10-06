@@ -11,7 +11,7 @@ export default class MainMenuPage extends React.Component {
     <section className={(this.props.isBlurred ? 'gameContainerBlurred' : 'gameContainer')}>
         <Navbar />
         <section className="items">
-            {this.props.items.map(function (item) {
+            {this.props.menuItems.map(function (item) {
                 return <div className="itemLineContainer">
                     <ItemPreview setPageview={setPageview} playerItemsQuantityMax={playerItemsQuantityMax} price={item.price} upDatePageview={upDatePageview} item={item} doesPlayerHaveThis={doesPlayerHaveThis} openBuyItemModal={openBuyItemModal} openSellItemModal={openSellItemModal} playerItems={playerItems} />
                     <ItemButtons currentDay={currentDay} setPageview={setPageview} openBuyItemModal={openBuyItemModal} openSellItemModal={openSellItemModal} item={item} price={item.price} playerItems={playerItems} playerItemsQuantityMax={playerItemsQuantityMax} doesPlayerHaveThis={doesPlayerHaveThis} />
