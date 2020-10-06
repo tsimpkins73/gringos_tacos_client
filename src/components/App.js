@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import LandingPage from './LandingPage.js';
+import MainMenuPage from './MainMenuPage.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -17,7 +19,7 @@ export default class App extends React.Component {
         
           <Route exact path={'/'} component={LandingPage} />
           <Route exact path={'/menu'} render={() => {
-            return <MainMenu
+            return <MainMenuPage
               isActive={this.state.ismenuActive}
               menu={this.state.menu}
             />
