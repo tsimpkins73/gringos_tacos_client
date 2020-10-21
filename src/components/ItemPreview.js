@@ -16,7 +16,7 @@ return <div className="itemLine">
 </div>
 </div>
 
-})
 }
+
 
 }

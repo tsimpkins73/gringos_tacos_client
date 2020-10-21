@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, Link} from 'react';
 import logo from './logo.svg';
 import './navbar.css';
 import cart from './cart.js';
@@ -40,7 +40,9 @@ export default class navbar extends React.Component {
                 My Order
             </Link>
           </ul>
-        </nav> );
+        </nav> 
+        </div>
+        );
 }
 
 }

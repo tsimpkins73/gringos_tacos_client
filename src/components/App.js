@@ -1,8 +1,10 @@
-import React from 'react';
+import {React, Route, BrowserRouter} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import LandingPage from './LandingPage.js';
 import MainMenuPage from './MainMenuPage.js';
+import Cart from './Cart.js';
+import Checkout from './Checkout.js';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -14,28 +16,28 @@ export default class App extends React.Component {
         price: 2.50,
         options:[
           {
-            name: 'Lettuce'
+            name: 'Lettuce',
             price: 0,
             calories: 0
           },
           {
-            name: 'Pico de Gallo'
+            name: 'Pico de Gallo',
             price: 0,
             calories: 20
           },
           {
-            name: 'Lime'
+            name: 'Lime',
             price: 0,
             calories: 0
           },
           {
-            name: 'Cheese'
+            name: 'Cheese',
             price: 0,
             calories: 25
           },
 
           {
-            name: 'Guacamole'
+            name: 'Guacamole',
             price: .50,
             calories: 25
           },          

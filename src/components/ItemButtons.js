@@ -1,5 +1,5 @@
 import React from 'react'
-import '../css/Gameview-Modals.css'
+import '../css/ItemButtons.css'
 
 export default class ItemButtons extends React.Component {
     constructor(props) {

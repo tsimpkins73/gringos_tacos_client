@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './css/cart.css';
+import CartItemLine from "./CartItemLine.js";
+import CartItemButtons from "./CartItemButtons.js";
 
 export default class cart extends React.Component {
 
@@ -11,8 +13,8 @@ export default class cart extends React.Component {
         <section className="items">
                     {this.props.cartItems.map(function (item) {
                         return <div className="cartItemLineContainer">
-                            <CartItemLine setGameview={setGameview} playerItemsQuantityMax={playerItemsQuantityMax} price={item.price} upDateGameview={upDateGameview} item={item} doesPlayerHaveThis={doesPlayerHaveThis} openBuyItemModal={openBuyItemModal} openSellItemModal={openSellItemModal} playerItems={playerItems} />
-                            <CartItemButtons currentDay={currentDay} setGameview={setGameview} openBuyItemModal={openBuyItemModal} openSellItemModal={openSellItemModal} item={item} price={item.price} playerItems={playerItems} playerItemsQuantityMax={playerItemsQuantityMax} doesPlayerHaveThis={doesPlayerHaveThis} />
+                            <CartItemLine item={item} />
+                            <CartItemButtons item={item} />
                         </div>
                     })}
                 </section>
