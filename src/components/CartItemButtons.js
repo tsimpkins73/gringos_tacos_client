@@ -1,7 +1,7 @@
 import React from 'react'
-import './css/ItemButtons.css'
+import './css/CartItemButtons.css'
 
-export default class ItemButtons extends React.Component {
+export default class CartItemButtons extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -44,7 +44,7 @@ removeItemModal = (item, price) => {
     let itemPrice = this.props.price;
 
     
-       return <div className="itemButtons"> 
+       return <div className="CartItemButtons"> 
            <button className= "openItemPage" onClick={() =>this.openItemPage(this.props.item, itemPrice)} name="buy" value="Buy">Buy</button>
     <button className= {(this.state.isRemoveActive) ? 'remove' : 'hidden'} onClick={() => this.openRemoveItemModal(this.props.item, itemPrice)} name="remove" value="Remove">Remove</button>
     </div>     

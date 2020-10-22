@@ -1,6 +1,6 @@
 import {React, Route, BrowserRouter} from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './css/App.css';
 import LandingPage from './LandingPage.js';
 import MainMenuPage from './MainMenuPage.js';
 import Cart from './Cart.js';
